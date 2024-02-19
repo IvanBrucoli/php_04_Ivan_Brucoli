@@ -9,5 +9,9 @@ class PublicController extends Controller
     public function homepage() {
         return view ('welcome');
     }
+
+    public function contactUs() {
+        return view ('contact-us');
+    }
 }
 

@@ -19,3 +19,9 @@ Route::get('/', [PublicController::class, 'homepage'])->name('homepage');
 
 //rotte auto
 Route::get('/cars', [CarController::class, 'CarIndex'])->name('car.index');
+
+
+
+//inserimento dati
+
+Route::get('/contattaci', [PublicController::class,'contactUs'])->name('contact.us');
