@@ -25,3 +25,5 @@ Route::get('/cars', [CarController::class, 'CarIndex'])->name('car.index');
 //inserimento dati
 
 Route::get('/contattaci', [PublicController::class,'contactUs'])->name('contact.us');
+
+Route::post('/contattaci/submit', [PublicController::class,'contactUsSubmit'])->name('contact.submit');    
