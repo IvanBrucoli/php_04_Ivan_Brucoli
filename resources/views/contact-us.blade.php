@@ -5,6 +5,11 @@
                 <h1 class="text-center display-4">
                     Contattaci!
                 </h1>
+                @if(session('errorMail'))
+                <div class="alert alert-danger text-center">
+                    {{session('errorMail')}}
+                </div>
+                @endif
             </div>
         </div>
         <div class="row justify-content-center">
