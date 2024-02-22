@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Mail\AdminContactMail;
 use App\Mail\ContactMail;
+use App\Models\Car;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 use PhpParser\Node\Stmt\TryCatch;
@@ -11,7 +12,8 @@ use PhpParser\Node\Stmt\TryCatch;
 class PublicController extends Controller
 {
     public function homepage() {
-        return view ('welcome');
+        $cars = Car::all();
+        return view ('welcome',compact('cars'));
     }
     
     public function contactUs() {

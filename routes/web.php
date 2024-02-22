@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\PublicController;
+use App\Models\Car;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -26,4 +27,8 @@ Route::get('/cars', [CarController::class, 'CarIndex'])->name('car.index');
 
 Route::get('/contattaci', [PublicController::class,'contactUs'])->name('contact.us');
 
-Route::post('/contattaci/submit', [PublicController::class,'contactUsSubmit'])->name('contact.submit');    
+Route::post('/contattaci/submit', [PublicController::class,'contactUsSubmit'])->name('contact.submit');  
+
+Route::get('/crea-auto', [CarController::class,'create'])->name('car.create');
+
+Route::post('/crea-auto/submit', [CarController::class,'store'])->name('car.store');

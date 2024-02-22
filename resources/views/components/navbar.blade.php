@@ -16,6 +16,9 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('contact.us') }}">Contattaci</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('car.create') }}">Metti in vendita la tua auto</a>
+                </li>
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
