@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Car;
 use Illuminate\Http\Request;
+use App\Http\Requests\CarRequest;
 
 class CarController extends Controller
 {
@@ -26,7 +27,7 @@ class CarController extends Controller
         return view('car.create');
     }
 
-    public function store(Request $request){
+    public function store(CarRequest $request){
         // $car = new Car();
         // $car->name = $request->name;
         // $car->model = $request->model;
@@ -41,6 +42,7 @@ class CarController extends Controller
             'model'=> $request->model,
             'condition' => $request->condition,
             'price' => $request->price,
+            'image'=> $request->file('image')->store('public/images'),
         ]);
 
         return redirect()->route('homepage')->with('success','Hai salvato la macchina in piattaforma');

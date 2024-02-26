@@ -7,7 +7,7 @@
     @vite(['resources/css/app.css', 'resources/js/app.js'])
     <title>Bootstrap demo</title>
   </head>
-  <body>
+  <body class="background">
     
   <x-navbar></x-navbar>
 
