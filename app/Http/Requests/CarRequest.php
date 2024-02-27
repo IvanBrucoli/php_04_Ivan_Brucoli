@@ -29,4 +29,20 @@ class CarRequest extends FormRequest
             'image'=> 'required|image|mimes:jpg,bmp,png',
         ];
     }
+
+    public function messages(): array
+    {
+        return [
+            'name.required'=> 'Il campo marca è obbligatorio',
+            'name.max'=> 'la marca deve avere massimo 10 caratteri',
+            'model.required'=> 'Il campo del modello è obbligatorio',
+            'model.min'=> 'Il modello deve avere almeno 1 carattere',
+            'condition.required'=> 'Il campo della condizione dell\'auto è obbligatorio',
+            'codition.min'=> 'Inserisci almeno 5 caratteri',
+            'price.required'=> 'Il campo del prezzo di vendita è obbligatorio',
+            'image.required'=> 'E\' obbligatorio una foto dell\'auto',
+            'image.image'=> 'L\'immagine deve essere in jpeg,bpm o png',
+
+        ];
+    }
 }
