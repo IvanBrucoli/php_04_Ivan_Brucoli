@@ -19,17 +19,31 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('car.create') }}">Metti in vendita la tua auto</a>
                 </li>
+                @guest
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
                         aria-expanded="false">
-                        Dropdown link
+                        Area Utente
                     </a>
                     <ul class="dropdown-menu">
-                        <li><a class="dropdown-item" href="#">Action</a></li>
-                        <li><a class="dropdown-item" href="#">Another action</a></li>
-                        <li><a class="dropdown-item" href="#">Something else here</a></li>
+                        <li><a class="dropdown-item" href="{{route('login')}}">Accedi</a></li>
+                        <li><a class="dropdown-item" href="{{route('register')}}">Registrati</a></li>
                     </ul>
                 </li>
+                @endguest
+                @auth
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                        Ciao, {{Auth::user()->name}}
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href=""  onclick="event.preventDefault();
+                        document.querySelector('#form-logout').submit();" class="dropdown-item">Logout</a></li>
+                        <form action="{{route('logout')}}" method="POST" id="form-logout">@csrf</form>
+                    </ul>
+                </li>
+                @endauth
             </ul>
         </div>
     </div>
