@@ -19,6 +19,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('car.create') }}">Metti in vendita la tua auto</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('category.index') }}">Visualizza categorie</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="{{ route('category.create') }}">Crea una categoria di Auto</a>
+                </li>
                 @guest
                 <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
