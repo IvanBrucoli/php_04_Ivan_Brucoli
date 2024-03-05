@@ -10,6 +10,7 @@
     </div>
     <div class="row justify-content-center py-5">
         <p>{{$category->description}}</p>
+        <p class="text-muted">inserito da: </p>
     </div>
     </div>
 

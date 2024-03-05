@@ -48,3 +48,5 @@ Route::put('/modifica-categoria/submit', [CategoryController::class, 'update'])-
 
 Route::delete('/cancella-categoria/{category}', [CategoryController::class,'destroy'])->name('category.delete');
 
+
+

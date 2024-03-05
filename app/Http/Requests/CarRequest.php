@@ -22,7 +22,7 @@ class CarRequest extends FormRequest
     public function rules(): array
     {
         return [
-            'name'=> 'required|max:10',
+            'name'=> 'required',
             'model'=> 'required|min:1',
             'condition'=> 'required|min:5',
             'price'=> 'required|numeric',
